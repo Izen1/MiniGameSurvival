@@ -115,31 +115,32 @@ public class AnvilDrop extends BukkitCommand {
 
     private boolean start;
     private void startTimer(int ready, int time) {
-        this.gameStartTimer = Bukkit.createBossBar("[ 시작 준비중 : " + ready + " ]", BarColor.RED, BarStyle.SOLID);
-        this.gameRunTimer = Bukkit.createBossBar("[ 남은 시간 : " + time + " ]", BarColor.RED, BarStyle.SOLID);
-        if (start) {
-            for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
-                gameStartTimer.addPlayer(onlinePlayer);
-            }
-            for (int i = 0; i >= ready * 1000; i++) {
-                if (i >= ready * 1000) {
-                    start = false;
-                    gameStartTimer.removeAll();
-                }
-                gameStartTimer.setTitle("[ 시작 준비중 : " + ready + " ]");
-            }
-        } else {
-            for (Player player : Bukkit.getOnlinePlayers()) {
-                gameRunTimer.addPlayer(player);
-            }
-            for (int i = 0; i >= time * 1000; i++) {
-                if (i >= time * 1000) {
-                    start = true;
-                    gameRunTimer.removeAll();
-                }
-                gameRunTimer.setTitle("[ 남은 시간 : " + time + " ]");
-            }
-        }
+        //작동 안함
+//        this.gameStartTimer = Bukkit.createBossBar("[ 시작 준비중 : " + ready + " ]", BarColor.RED, BarStyle.SOLID);
+//        this.gameRunTimer = Bukkit.createBossBar("[ 남은 시간 : " + time + " ]", BarColor.RED, BarStyle.SOLID);
+//        if (start) {
+//            for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
+//                gameStartTimer.addPlayer(onlinePlayer);
+//            }
+//            for (int i = 0; i >= ready * 1000; i++) {
+//                if (i >= ready * 1000) {
+//                    start = false;
+//                    gameStartTimer.removeAll();
+//                }
+//                gameStartTimer.setTitle("[ 시작 준비중 : " + ready + " ]");
+//            }
+//        } else {
+//            for (Player player : Bukkit.getOnlinePlayers()) {
+//                gameRunTimer.addPlayer(player);
+//            }
+//            for (int i = 0; i >= time * 1000; i++) {
+//                if (i >= time * 1000) {
+//                    start = true;
+//                    gameRunTimer.removeAll();
+//                }
+//                gameRunTimer.setTitle("[ 남은 시간 : " + time + " ]");
+//            }
+//        }
     }
 
     @Override
