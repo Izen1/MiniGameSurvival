@@ -1,0 +1,4 @@
+name: MiniGameSurvival
+version: '${version}'
+main: kr.kro.izen.MiniGameSurvival.MiniGameSurvival
+api-version: '1.20'
